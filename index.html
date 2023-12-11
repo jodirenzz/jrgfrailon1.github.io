@@ -4,143 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My webpage - Jodi renz Frailon</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>My webpage - Jodi renz Frailon </title>
 </head>
 
 <body>
     <div class="hero">
         <div class="hero-title">
             <h1>MY WEBPAGE</h1>
-            <h4 style="font-size: 30px; margin-left: 200px;">Jodi Renz Frailon Com-Sci 1-A</h4>
+            <h4 style="font-size: 30px; margin-left: 200px; ">Jodi Renz Frailon Com-Sci 1-A</h4>
         </div>
         <video id="myVideo" width="100%" height="100%" autoplay muted loop playsinline>
             <source src="./video/sprited.mp4" type="video/mp4">
         </video>
+
     </div>
     <div class="hero-2">
         <div class="button-container">
 
-            <button id="openModalButton" style="cursor: pointer;">Conversion</button>
+            <button id="openModalButton" style="cursor: pointer;" class="transparent-button">Conversion</button>
             <div id="transparentModal" class="modal">
-                <div class="modal-content">
+
+                <div class="modal-content">>
                     <span class="close-button" onclick="closeModal()">&times;</span>
-                    <H1 class="modal-h1" style="margin-left: 20px;">
-                        Temperature Conversion
-                    </H1>
-                    <div class="temp-modal" style="margin-left: 20px;">
+                    <H1 class="modal-h1" ">
+                    Temperature Conversion
+                </H1>
+
+            <div class=" temp-modal">
                         <div class="temp-p">
-                            <p>Celsius</p>
+                            <p>Celcius</p>
                             <p>Fahrenheit</p>
                         </div>
                         <div class="temp-context">
-                            <input placeholder="Enter a digit" id="celsius" class="input-1" type="number">
+                            <input placeholder="Enter a digit" id="celsius" class="input-1" type="number" celcius">
                             <h1>≈</h1>
-                            <input placeholder="Enter a digit" id="fahrenheit" class="input-1" type="number">
+                            <input placeholder="Enter a digit" id="fahrenheit" class="input-1" type="number" celcius">
                         </div>
-                        <p style="margin-top: 10px;">Input a temperature in Celsius to dynamically calculate the corresponding Fahrenheit value using the conversion formula.</p>
+                        <p> input a temperature in Celsius dynamically
+                            calculates the corresponding Fahrenheit value using the conversion formula, and the Celsius
+                            value is obtained
+                            using the conversion
+                            formula.
+                        </p>
                         <div class="temp-p">
                             <p>Meter</p>
                             <p>Feet</p>
                         </div>
                         <div class="temp-context">
-                            <input placeholder="Enter a digit" id="meter" class="input-1" type="number">
+                            <input placeholder="Enter a digit" id="meter" class="input-1" type="number" meter">
                             <h1>≈</h1>
-                            <input placeholder="Enter a digit" id="feet" class="input-1" type="number">
+                            <input placeholder="Enter a digit" id="feet" class="input-1" type="number" feet">
                         </div>
-                        <p style="margin-top: 10px;">Input a distance in feet to dynamically calculate the corresponding value in meters using the reverse conversion formula.</p>
+                        <p>input a distance in feet, the corresponding value in meters is dynamically calculated
+                            using the reverse
+                            conversion formula.
+                        </p>
+                </div>
+            </div>
+        </div>
+
+        <button id="openModalButton4" style="cursor: pointer;" class="transparent-button">Incometax</button>
+        <div id="transparentModal4" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal4()">&times;</span>
+                <h1 class="modal-h1" for="income">ANNUAL INCOME </h1>
+                <div class="content">
+                    <input class="input-1" type="number" id="income" placeholder="Enter Annual Income">
+                    <button type="button" style="height:110px ;" id="incomelevel">Calculate </button><br>
+                    <div id="result-income" class="result-income">
+                        <p>Taxable Income: </p>
+                        <p id="beforetax"></p>
+                        <p>Tax:</p>
+                        <p id="tax"></p>
+                        <p>Income after tax: </p>
+                        <p id="aftertax"></p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <button id="openModalButton4" style="cursor: pointer;">Incometax</button>
-            <div id="transparentModal4" class="modal">
-                <div class="modal-content">
-                    <span class="close-button" onclick="closeModal4()">&times;</span>
-                    <h1 class="modal-h1" for="income">ANNUAL INCOME </h1>
-                    <div class="content">
-                        <input class="input-1" type="number" id="income" placeholder="Enter Annual Income">
-                        <button type="button" style="height: 110px;" id="incomelevel">Calculate </button><br>
-                        <div id="result-income" class="result-income">
-                            <p>Taxable Income: </p>
-                            <p id="beforetax"></p>
-                            <p>Tax:</p>
-                            <p id="tax"></p>
-                            <p>Income after tax: </p>
-                            <p id="aftertax"></p>
+        <button id="openModalButton3" style="cursor: pointer;" class="transparent-button">Looping</button>
+        <div id="transparentModal3" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal3()">&times;</span>
+                <div class="looping-content">
+                    <h1 class="modal-h1">Factorial, Sum, Average</h1>
+                    <div class="content-2">
+                        <div class="box2">
+                            <h1 style="color: white"> FACTORIAL </h1>
+                            <input class="input-1" type="number" id="factorial" placeholder="Enter a digit"></input>
+                            <button style="height:110px" onclick=" factorial()">Calculate </button>
+                            <div id="resultF" class="result"></div>
+                        </div>
+                        <div class="box2">
+                            <h1 style="color: white;"> SUM </h1>
+                            <input class="input-1" type="number" id="input1" placeholder="Enter a digit"></input>
+                            <button style="height:110px" onclick="sum()">Calculate</button>
+                            <div id="sum" class="result"></div>
+                        </div>
+                        <div class="box2">
+                            <h1 style="color: white"> AVERAGE </h1>
+                            <input class="input-1" type="number" pattern="[0-9]*" id="average"
+                                placeholder="Enter a digit">
+                            <button style="height:110px" onclick="average()">Calculate</button>
+                            <div id="result" class="result"></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <button id="openModalButton3" style="cursor: pointer;">Looping</button>
-            <div id="transparentModal3" class="modal">
-                <div class="modal-content">
-                    <span class="close-button" onclick="closeModal3()">&times;</span>
-                    <div class="looping-content">
-                        <h1 class="modal-h1">Factorial, Sum, Average</h1>
-                        <div class="content-2">
-                            <div class="box2">
-                                <h1 style="color: white"> FACTORIAL </h1>
-                                <input class="input-1" type="number" id="factorial" placeholder="Enter a digit"></input>
-                                <button style="height: 110px" onclick=" factorial()">Calculate </button>
-                                <div id="resultF" class="result"></div>
-                            </div>
-                            <div class="box2">
-                                <h1 style="color: white;"> SUM </h1>
-                                <input class="input-1" type="number" id="input1" placeholder="Enter a digit"></input>
-                                <button style="height: 110px" onclick="sum()">Calculate</button>
-                                <div id="sum" class="result"></div>
-                            </div>
-                            <div class="box2">
-                                <h1 style="color: white"> AVERAGE </h1>
-                                <input class="input-1" type="number" pattern="[0-9]*" id="average"
-                                    placeholder="Enter a digit">
-                                <button style="height: 110px" onclick="average()">Calculate</button>
-                                <div id="result" class="result"></div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        <button id="openModalButton2" style="cursor: pointer;" class="transparent-button">Payroll</button>
+        <div id="transparentModal2" class="modal">
+            <div class="modal-content-1">
+                <H1 class="modal-h1">
+                    Temperature Conversion
+                </H1>
+                <div style=" gap: 10px;" class=" content-1">
+                    <span class="close-button" onclick="closeModal2()">&times;</span>
+                    <label for="employeeName">Employee Name:</label>
+                    <input placeholder="Enter a Name" type="text" id="employeeName" required>
+                    <label for="daysWorked">Days Worked:</label>
+                    <input placeholder="Enter a digit" type="number" id="daysWorked" required>
+                    <label for="dailyRate">Daily Rate:</label>
+                    <input placeholder="Enter a digit" type="number" id="dailyRate" required>
+                    <label for="deductionAmount">Deduction Amount:</label>
+                    <input placeholder="Enter a digit" type="number" id="deductionAmount" required>
+                    <button id="addEmployee">ADD</button>
+                    <input placeholder="No." style=" width:  60px;" type="number" id="lineNumber">
+                    <button type="button" id="deleteEmployee">DEL</button>
                 </div>
-            </div>
-            <button id="openModalButton2" style="cursor: pointer;">Payroll</button>
-            <div id="transparentModal2" class="modal">
-                <div class="modal-content-1">
-                    <H1 class="modal-h1">
-                        Temperature Conversion
-                    </H1>
-                    <div style=" gap: 10px;" class=" content-1">
-                        <span class="close-button" onclick="closeModal2()">&times;</span>
-                        <label for="employeeName">Employee Name:</label>
-                        <input placeholder="Enter a Name" type="text" id="employeeName" required>
-                        <label for="daysWorked">Days Worked:</label>
-                        <input placeholder="Enter a digit" type="number" id="daysWorked" required>
-                        <label for="dailyRate">Daily Rate:</label>
-                        <input placeholder="Enter a digit" type="number" id="dailyRate" required>
-                        <label for="deductionAmount">Deduction Amount:</label>
-                        <input placeholder="Enter a digit" type="number" id="deductionAmount" required>
-                        <button id="addEmployee">ADD</button>
-                        <input placeholder="No." style="width: 60px;" type="number" id="lineNumber">
-                        <button type="button" id="deleteEmployee">DEL</button>
-                    </div>
-                    <table id="payrollTable">
-                        <tr>
-                            <th>No.</th>
-                            <th>Employee Name</th>
-                            <th>Days Worked</th>
-                            <th>Daily Rate</th>
-                            <th>Gross Pay</th>
-                            <th>Deduction Amount</th>
-                        </tr>
-                    </table>
-                    <div class="modal-content1" id="openModaldel">
-                        <div class="confirmationModal" id="confirmationModal">
-                            <p>Are you sure you want to delete this employee?</p>
-                            <div class="confirm-btn">
-                                <button id="confirmDelete">Yes</button>
-                                <button id="cancelDelete">No</button>
-                            </div>
-
+                <table id="payrollTable">
+                    <tr>
+                        <th>No.</th>
+                        <th>Employee Name</th>
+                        <th>Days Worked</th>
+                        <th>Daily Rate</th>
+                        <th>Gross Pay</th>
+                        <th>Deduction Amount</th>
+                    </tr>
+                </table>
+                <div class="modal-content1" id="openModaldel">
+                    <div class="confirmationModal" id="confirmationModal">
+                        <p>Are you sure you want to delete this employee?</p>
+                        <div class="confirm-btn">
+                            <button id="confirmDelete">Yes</button>
+                            <button id="cancelDelete">No</button>
                         </div>
+
                     </div>
                 </div>
             </div>
